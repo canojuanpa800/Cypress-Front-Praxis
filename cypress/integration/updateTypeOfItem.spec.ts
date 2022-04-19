@@ -13,7 +13,7 @@ describe("Scenario 1: Adding Items", () => {
     menuContentPage.visitMainPage();
 
     updateTypeOfItem.goToUpdateItem();
-    
+
     updateTypeOfItem.selectAnAgedTypeItem();
 
     updateTypeOfItem.clickInUpdateButton();

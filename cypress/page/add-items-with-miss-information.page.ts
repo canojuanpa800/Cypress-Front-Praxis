@@ -53,4 +53,4 @@ class AddItemsWithMissInformationPage {
     }
 }
 
-export {AddItemsWithMissInformationPage}
+export { AddItemsWithMissInformationPage }

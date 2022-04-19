@@ -1,9 +1,10 @@
 // @ts-ignore
-import { MenuContentPage, MenuAddItemsPage, AddItemsSuccessfullyPage } from "../page/index";
+import { MenuContentPage, MenuAddItemsPage, AddItemsSuccessfullyPage, PreconditionTest } from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const menuAddItemsPage = new MenuAddItemsPage();
 const addItemsSuccessfullyPage = new AddItemsSuccessfullyPage();
+const preconditionTest = new PreconditionTest();
 
 describe("Scenario 1: Adding Items", () => {
   it("**Given** the user has clicked on ADD(+) button\n"
@@ -12,6 +13,8 @@ describe("Scenario 1: Adding Items", () => {
       + "**Then** The items is displayed on list view\n"
       + "**And** The information set is displayed according to added in creation step.", () => {
     menuContentPage.visitMainPage();
+
+    preconditionTest.preparateScenario();
 
     menuAddItemsPage.goToCreateItem();
 
@@ -22,5 +25,7 @@ describe("Scenario 1: Adding Items", () => {
 
     addItemsSuccessfullyPage.goToItemDetailForItemCreated();
     addItemsSuccessfullyPage.checkItemValues();
+
+    preconditionTest.endOfScenario();
   });
 });

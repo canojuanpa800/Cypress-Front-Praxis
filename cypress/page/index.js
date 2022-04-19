@@ -1,5 +1,6 @@
-export { MenuContentPage } from './menu-content.page'
-export { MenuAddItemsPage } from './menu-add-items.page'
 export { AddItemsSuccessfullyPage } from './add-items-successfully.page'
 export { AddItemsWithMissInformationPage } from './add-items-with-miss-information.page'
+export { MenuAddItemsPage } from './menu-add-items.page'
+export { MenuContentPage } from './menu-content.page'
 export { UpdateTypeOfItem } from './update-type-of-item.page'
+export { PreconditionTest } from './precondition-test.page'
