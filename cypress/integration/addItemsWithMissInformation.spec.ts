@@ -11,8 +11,8 @@ describe("Scenario 2: Adding items with miss information", () => {
         + "**And** the user fills the quality with negative value\n"
         + "**Then** ADD button is Disabled\n"
         + "**And** \"Expected value between 0 and 80\" message is displayed on quality field", () => {
-
     menuContentPage.visitMainPage();
+    // menuContentPage.scenario1();
 
     menuAddItemsPage.goToCreateItem();
 

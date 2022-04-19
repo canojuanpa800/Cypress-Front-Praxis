@@ -4,7 +4,7 @@
   "description": "this a homework#3 praxis Perficient",
   "main": "index.js",
   "scripts": {
-    "test:open": "npm run lint && cypress open",
+    "test:open": "npm run lint -- --fix && cypress open",
     "lint": "eslint ./cypress/integration/**/*.ts",
     "lint:fix": "npm run lint -- --fix"
   },
