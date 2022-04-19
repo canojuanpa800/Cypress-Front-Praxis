@@ -1,0 +1,24 @@
+{
+  "name": "cypress-front-praxis",
+  "version": "1.0.0",
+  "description": "this a homework#3 praxis Perficient",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canojuanpa800/Cypress-Front-Praxis.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "cypress",
+    "practice"
+  ],
+  "author": "Juan Pablo Cano <jcanor@unal.edu.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canojuanpa800/Cypress-Front-Praxis/issues"
+  },
+  "homepage": "https://github.com/canojuanpa800/Cypress-Front-Praxis#readme"
+}
