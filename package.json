@@ -4,7 +4,9 @@
   "description": "this a homework#3 praxis Perficient",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test:open": "npm run lint && cypress open",
+    "lint": "eslint ./cypress/integration/**/*.ts",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,18 @@
   "bugs": {
     "url": "https://github.com/canojuanpa800/Cypress-Front-Praxis/issues"
   },
-  "homepage": "https://github.com/canojuanpa800/Cypress-Front-Praxis#readme"
+  "homepage": "https://github.com/canojuanpa800/Cypress-Front-Praxis#readme",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "cypress": "^9.5.4",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.26.0",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0"
+  }
 }
