@@ -5,12 +5,14 @@ class PreconditionTest {
     private baseUrl: string
     private listOfElements: any;
     private ficticiousItem: any;
+    private ficticiousItem2: any;
 
     constructor() {
 
         this.baseUrl = "http://localhost:8080/api/items"
         this.listOfElements = []
         this.ficticiousItem = { "name": "ItemForPreparateScenarios", "sellIn": 12, "quality": 35, "type": "NORMAL" }
+        this.ficticiousItem2 = { "name": "ItemForPreparateScenarios2", "sellIn": 20, "quality": 20, "type": "AGED" }
 
     }
 
@@ -25,10 +27,23 @@ class PreconditionTest {
     public endOfScenario(): void {
         this.deleteElements()
         this.retrieveItems()
+        // cy.reload()
+    }
+
+    public preparateScenario4(): void {
+        this.saveElements()
+        this.deleteElements()
+        this.createElement()
+        this.createElement2()
+        cy.reload()
     }
 
     public createElement(): void {
         cy.request('POST', this.baseUrl, this.ficticiousItem)
+    }
+
+    public createElement2(): void {
+        cy.request('POST', this.baseUrl, this.ficticiousItem2)
     }
 
     public saveElements(): List<Item> {
