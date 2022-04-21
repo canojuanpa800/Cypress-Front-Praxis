@@ -1,5 +1,7 @@
 // @ts-ignore
-import { MenuContentPage, UpdateTypeOfItem, PreconditionTest, UpdateTypeOfItemSuccessfullyPage } from "../page/index";
+import {
+  MenuContentPage, UpdateTypeOfItem, PreconditionTest, UpdateTypeOfItemSuccessfullyPage,
+} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const updateTypeOfItem = new UpdateTypeOfItem();
@@ -14,20 +16,19 @@ describe("Scenario 3: Updating type of item", () => {
       + "**And** The type amount is updated on INSIGHTS view.", () => {
     menuContentPage.visitMainPage();
 
-    preconditionTest.preparateScenario3();   
+    preconditionTest.preparateScenario3();
 
     updateTypeOfItem.goToUpdateItem();
     updateTypeOfItem.selectAnAgedTypeItem();
     updateTypeOfItem.clickInUpdateButton();
     updateTypeOfItemSuccessfullyPage.checkTypeItem();
 
-    cy.reload()
+    cy.reload();
 
     menuContentPage.goToIngights();
 
     updateTypeOfItemSuccessfullyPage.checkAmounts();
 
     preconditionTest.endOfScenario();
-
   });
 });
