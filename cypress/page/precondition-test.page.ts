@@ -16,20 +16,28 @@ class PreconditionTest {
 
     }
 
-    //principal method for start test Scenario1 and Scenario2
+    //principal method for start test Scenario1,2,3 and 4
     public preparateScenario(): void {
         this.saveElements()
         this.deleteElements()
         cy.reload()
     }
 
-    //principal method for end test Scenario1 and Scenario2
+    //principal method for end test Scenario1,2,3 and 4
     public endOfScenario(): void {
         this.deleteElements()
         this.retrieveItems()
-        // cy.reload()
     }
 
+    //principal method for start test Scenario3
+    public preparateScenario3(): void {
+        this.saveElements()
+        this.deleteElements()
+        this.createElement()
+        cy.reload()
+    }
+
+    //principal method for start test Scenario4
     public preparateScenario4(): void {
         this.saveElements()
         this.deleteElements()

@@ -10,7 +10,13 @@ class DeleteItemSuccessfullyPage {
     private qualityItem: string
 
     private typeField: string
-    private normalTypeItem: string
+    private typeItem: string
+
+    private agedAmountField: string
+    private agedAmount: string
+
+    private normalAmountField: string
+    private normalAmount: string
 
     constructor() {
 
@@ -24,7 +30,13 @@ class DeleteItemSuccessfullyPage {
         this.qualityItem = '20';
 
         this.typeField = 'body > app-root > list > div > div.ng-star-inserted > mat-card > div:nth-child(4)';
-        this.normalTypeItem = 'AGED';
+        this.typeItem = 'AGED';
+
+        this.agedAmountField = 'body > app-root > insights > div > div > div > div:nth-child(4)'
+        this.agedAmount = ' 1 ';
+
+        this.normalAmountField = 'body > app-root > insights > div > div > div > div:nth-child(8)'
+        this.normalAmount = ' 0 '
 
     }
 
@@ -32,7 +44,12 @@ class DeleteItemSuccessfullyPage {
         cy.get(this.nameField).should('have.text', this.nameItem)
         cy.get(this.sellInField).should('have.text', this.sellInItem)
         cy.get(this.qualityField).should('have.text', this.qualityItem)
-        cy.get(this.typeField).should('have.text', this.normalTypeItem)
+        cy.get(this.typeField).should('have.text', this.typeItem)
+    }
+
+    public checkAmounts(): void {
+        cy.get(this.agedAmountField).should('have.text', this.agedAmount)
+        cy.get(this.normalAmountField).should('have.text', this.normalAmount)
     }
 }
 

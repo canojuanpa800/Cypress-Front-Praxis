@@ -14,9 +14,9 @@ class UpdateTypeOfItem {
 
         this.typeField = '[formcontrolname="type"]';
         this.agedTypeItem = 'AGED';
-        this.agedTypeItemOption = '#mat-option-0';
+        this.agedTypeItemOption = '#mat-option-0 > span';
 
-        this.updateButton = 'button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary'
+        this.updateButton = '#mat-dialog-0 > item-form-dialog > div > div.item-form-dialog-actions > button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary'
         
     }
 

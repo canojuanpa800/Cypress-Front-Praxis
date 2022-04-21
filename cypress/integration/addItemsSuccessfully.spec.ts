@@ -1,5 +1,7 @@
 // @ts-ignore
-import { MenuContentPage, MenuAddItemsPage, AddItemsSuccessfullyPage, PreconditionTest } from "../page/index";
+import {
+  MenuContentPage, MenuAddItemsPage, AddItemsSuccessfullyPage, PreconditionTest,
+} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const menuAddItemsPage = new MenuAddItemsPage();

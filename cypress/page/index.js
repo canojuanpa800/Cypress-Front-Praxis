@@ -3,6 +3,7 @@ export { AddItemsWithMissInformationPage } from './add-items-with-miss-informati
 export { MenuAddItemsPage } from './menu-add-items.page'
 export { MenuContentPage } from './menu-content.page'
 export { UpdateTypeOfItem } from './update-type-of-item.page'
+export { UpdateTypeOfItemSuccessfullyPage } from './update-type-of-item-success.page'
 export { PreconditionTest } from './precondition-test.page'
 export { MenuDeleteItemPage } from './menu-delete-item.page'
 export { DeleteItemSuccessfullyPage } from './delete-item-successfully.page'

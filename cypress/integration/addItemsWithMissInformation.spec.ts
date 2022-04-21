@@ -1,5 +1,7 @@
 // @ts-ignore
-import { MenuContentPage, MenuAddItemsPage, AddItemsWithMissInformationPage, PreconditionTest } from "../page/index";
+import {
+  MenuContentPage, MenuAddItemsPage, AddItemsWithMissInformationPage, PreconditionTest,
+} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const menuAddItemsPage = new MenuAddItemsPage();
@@ -26,6 +28,5 @@ describe("Scenario 2: Adding items with miss information", () => {
     addItemsWithMissInformationPage.checkExpectQualityErrorMessage();
 
     preconditionTest.endOfScenario();
-    
   });
 });
