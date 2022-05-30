@@ -9,7 +9,7 @@ class PreconditionTest {
   private listOfFicticius: any;
 
   constructor() {
-    this.baseUrl = "http://localhost:8080/api/items";
+    this.baseUrl = "http://44.205.30.180:8090/api/items";
     this.listOfElements = [];
 
     this.failedItem = {
