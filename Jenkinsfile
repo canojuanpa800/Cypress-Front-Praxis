@@ -6,19 +6,22 @@ node{
 
     stage('Build'){
     //The steps section defines a series of one or more steps to be executed in a given stage directive.
-        echo "Building the application"
+      echo "Building the application"
+      sh 'curl -s https://deb.nodesource.com/setup_16.x | sudo bash'
+      echo 'Install Node v-16'
+      sh 'sudo apt install nodejs -y'
+      echo 'Install dependencies'
     }
 
     stage('Testing') {
-
-        sh "npm i"
-        sh "npm run test"
+      echo 'Run test'
+      sh "npm run test"
 
     }
         
     stage('Deploy'){
 
-        echo "Deploying"
+      echo "Deploying"
 
     }
     
