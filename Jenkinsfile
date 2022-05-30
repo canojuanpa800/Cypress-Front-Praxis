@@ -9,7 +9,9 @@ node{
       echo 'Cache clear'
       sh 'npm cache clear'
       */
-      
+
+      sh 'sudo apt-get update'
+
       echo "Building the application"
       sh 'npm install'
     }
