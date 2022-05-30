@@ -11,7 +11,7 @@ node{
       */
 
       echo 'get dependencies'
-      sh 'sudo apt-get install xvfb'
+      sh 'sudo apt install xvfb'
       
       sh 'sudo apt-get update'
 
