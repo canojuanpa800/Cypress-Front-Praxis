@@ -10,8 +10,8 @@ node{
       sh 'npm cache clear'
       */
 
-      echo 'get dependencies'
-      sh 'sudo apt-get update'
+      echo 'dependencies'
+      sh 'npm install cypress --save-dev'
 
       echo "Building the application"
       sh 'npm install'
