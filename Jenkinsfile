@@ -1,34 +1,13 @@
-node{
-
-    stage('Get a changes'){
-        git url:'https://github.com/canojuanpa800/Cypress-Front-Praxis', branch:'main'
+pipeline {
+  agent {
+    docker {
+      image 'cypress/base:10'
     }
+  }
 
-    stage('Build'){
-      /*
-      echo 'Cache clear'
-      sh 'npm cache clear'
-      */
-
-      echo 'get dependencies'
-      sh 'sudo apt install xvfb'
-      
-      sh 'sudo apt-get update'
-
-      echo "Building the application"
-      sh 'npm install'
+  stages {
+    stage('Build and test'){
+      sh 'npm run test'
     }
-
-    stage('Testing') {
-      echo 'Run test'
-      sh "npm run test"
-
-    }
-        
-    stage('Deploy'){
-
-      echo "Deploying"
-
-    }
-    
+  }
 }
