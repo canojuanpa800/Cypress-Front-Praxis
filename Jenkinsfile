@@ -5,9 +5,11 @@ node{
     }
 
     stage('Build'){
+      /*
       echo 'Cache clear'
       sh 'npm cache clear'
-
+      */
+      
       echo "Building the application"
       sh 'npm install'
     }
