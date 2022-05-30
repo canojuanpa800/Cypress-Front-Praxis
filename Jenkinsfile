@@ -5,7 +5,9 @@ node{
     }
 
     stage('Build'){
-    //The steps section defines a series of one or more steps to be executed in a given stage directive.
+      echo 'Cache clear'
+      sh 'npm cache clear'
+
       echo "Building the application"
       sh 'npm install'
     }
