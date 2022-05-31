@@ -10,10 +10,7 @@ node{
       sh 'npm cache clear'
       */
 
-      echo 'dependencies'
-      sh 'npm install cypress --save-dev'
-
-      echo "Building the application"
+      echo "Install dependencies"
       sh 'npm install'
     }
 
