@@ -1,5 +1,8 @@
 node{
 
+  // Necessary packages to run cypress
+  // sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+
     stage('Get a changes'){
         git url:'https://github.com/canojuanpa800/Cypress-Front-Praxis', branch:'main'
     }
@@ -12,14 +15,13 @@ node{
       */
 
       echo "Install dependencies"
-      sh 'npm install'
       sh 'npm install cypress --save-dev'
       
     }
 
     stage('Testing') {
       echo 'Run test'
-      sh "npm run test"
+      sh "npm test"
 
     }
         
