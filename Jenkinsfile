@@ -12,8 +12,8 @@ node{
       */
 
       echo "Install dependencies"
+      sh 'npm install cypress --save-dev'
       sh 'npm install'
-      sh 'cypress verify'
     }
 
     stage('Testing') {
