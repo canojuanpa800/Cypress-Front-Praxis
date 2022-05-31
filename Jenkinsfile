@@ -5,6 +5,7 @@ node{
     }
 
     stage('Build'){
+      
       /*
       echo 'Cache clear'
       sh 'npm cache clear'
@@ -12,6 +13,7 @@ node{
 
       echo "Install dependencies"
       sh 'npm install'
+      sh 'cypress verify'
     }
 
     stage('Testing') {
