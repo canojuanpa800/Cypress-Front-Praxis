@@ -22,6 +22,7 @@ class UpdateTypeOfItem {
 
     public goToUpdateItem():void {
         cy.get(this.penIcon).first().children().last().children().first().click()
+        cy.wait(2000)
     }
 
     public selectAnAgedTypeItem(): void {
