@@ -4,7 +4,7 @@ node{
   // sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
     stage('Get a changes'){
-        git url:'https://github.com/canojuanpa800/Cypress-Front-Praxis', branch:'main'
+      git url:'https://github.com/canojuanpa800/Cypress-Front-Praxis', branch:'main'
     }
 
     stage('Build'){
@@ -15,7 +15,7 @@ node{
       */
 
       echo "Install dependencies"
-      sh "sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb"
+      sh "sudo -s apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb"
       sh 'npm install cypress --save-dev'
       
     }
