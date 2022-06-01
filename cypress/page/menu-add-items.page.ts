@@ -7,6 +7,7 @@ class MenuAddItemsPage {
 
     public goToCreateItem(): void {
         cy.get(this.plusAddButton).click()
+        cy.wait(2000)
     }
 
 }

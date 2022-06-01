@@ -42,6 +42,7 @@ class AddItemsWithMissInformationPage {
 
     public checkAddButtonIsDisabled(): void {
         cy.get(this.addButton).should('be.disabled')
+        cy.wait(2000)
     }
 
     public clickOnTitle(): void {

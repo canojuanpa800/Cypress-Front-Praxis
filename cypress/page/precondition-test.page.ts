@@ -69,10 +69,12 @@ class PreconditionTest {
   }
 
   public createElement(): void {
+    cy.wait(2000)
     cy.request("POST", this.baseUrl, this.ficticiousItem);
   }
 
   public createElement2(): void {
+    cy.wait(2000)
     cy.request("POST", this.baseUrl, this.ficticiousItem2);
   }
 
@@ -88,12 +90,14 @@ class PreconditionTest {
   public deleteElements(): void {
     cy.request("GET", this.baseUrl).then((ans) => {
       ans.body.forEach((item: Item) => {
+        cy.wait(2000)
         cy.request("DELETE", this.baseUrl + "/" + item.id);
       });
     });
   }
 
   public retrieveItems(): void {
+    cy.wait(2000)
     cy.request("POST", this.baseUrl + "/createItems", this.listOfElements);
   }
 

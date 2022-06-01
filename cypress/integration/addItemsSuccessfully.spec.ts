@@ -19,7 +19,6 @@ describe("Scenario 1: Adding Items", () => {
     preconditionTest.preparateScenario();
 
     menuAddItemsPage.goToCreateItem();
-
     addItemsSuccessfullyPage.typeANewItem();
     addItemsSuccessfullyPage.selectANormalTypeItem();
 

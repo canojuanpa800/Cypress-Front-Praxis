@@ -52,11 +52,12 @@ class AddItemsSuccessfullyPage {
   }
 
   public clickInAddButton(): void {
+    cy.wait(2000)
     cy.get(this.addButton).click();
   }
 
   public goToItemDetailForItemCreated(): void {
-    cy.wait(500);
+    cy.wait(2000);
     cy.get(this.itemWasCreated)
       .last()
       .children()
